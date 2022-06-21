@@ -1,2 +1,2 @@
 # devops
-for devops practice
+for devops practice at mnp institute
