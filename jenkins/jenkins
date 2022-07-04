@@ -1,39 +1,39 @@
 pipeline{
 	    agent any
 	        stages{
-		      sh ```
+		      sh '''
 	            stage('System details'){
 	                steps{
 	                    sh 'uname -a'
-			    ```
+			    '''
 	                }
 	            }
 	            stage('Memory details'){
 	                steps{
-		            sh ```
+		            sh '''
 	                    sh 'free'
-			    ```
+			    '''
 	                }
 	            }
 	            stage('CPU details'){
 	                steps{
-			     sh ```
+			     sh '''
 	                    sh 'lscpu'
-			    ```
+			    '''
 	                }
 	            }
 	            stage('Disk details'){
 	                steps{
-			     sh ```
+			     sh '''
 	                    sh 'df -h | tail -5'
-			    ```
+			    '''
 	                }
 	            }
 		    stage ('Display'){
 		    	steps{
-			     sh ```
+			     sh '''
 			sh 'echo "Test completed"'
-			```
+			'''
 			}
 		    }
 	        }
