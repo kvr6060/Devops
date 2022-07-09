@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+        stages{
+            stage('System details'){
+                sh ```
+                steps{
+                    sh 'uname -a'
+                    ```
+                }
+            }
+            stage('Memory details'){
+                steps{
+                sh ```
+                    sh 'free'
+                    ```
+                }
+            }
+            stage('CPU details'){
+                steps{
+                sh ```
+                    sh 'lscpu'
+                    ```
+                }
+            }
+            stage('Disk details'){
+                steps{
+                sh ```
+                    sh 'df -h | tail -5'
+                    ```
+                }
+            }
+	    stage ('Display'){
+	    	steps{
+        sh ```
+		sh 'echo "Test completed"'
+    ```
+		}
+	    }
+        }
