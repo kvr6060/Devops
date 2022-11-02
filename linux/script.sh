@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "wellcome to git repo"
+echo "wellcome to git repo in host 'hostname'"
