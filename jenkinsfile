@@ -38,6 +38,7 @@ pipeline{
                     sh '''
                     echo "Process command"
                     ps
+                     bash $[WORKSPACE] /linux/script.sh
                     '''
                 }
             }
