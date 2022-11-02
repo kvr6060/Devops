@@ -2,8 +2,8 @@ pipeline{
     agent any
         stages{
             stage('System details'){
-                sh ```
                 steps{
+		 sh ``` 
                     sh 'uname -a'
                     ```
                 }
