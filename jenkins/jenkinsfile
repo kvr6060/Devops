@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage('node1') {
+            agent {
+                label 'Node1'
+            }
+            steps {
+                sh 'echo "Node IP:`hostname -I`"'
+                sh 'echo -e "Node-Memory Details:\n"'
+                sh 'free'
+            }
+        }
+        stage('node2') {
+            steps {
+                sh 'echo "Master IP:`hostname -I`"'
+                sh 'echo -e "Master-Memory Details:\n"'
+                sh 'free'
+            }
+        }
+    }
+}
