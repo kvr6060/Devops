@@ -11,10 +11,10 @@ pipeline {
                 sh 'free'
             }
         }
-        stage('master') {
+        stage('docker container') {
             steps {
-                sh 'echo "Master IP:`hostname -I`"'
-                sh 'echo -e "Master-Memory Details:\n"'
+                sh 'echo "container IP:`hostname -I`"'
+                sh 'echo -e "container-Memory Details:\n"'
                 sh 'free'
             }
         }
