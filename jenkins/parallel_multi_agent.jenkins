@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('node') {
+        stage('docker') {
             agent {
-                label 'Node1'
+                label 'docker'
             }
             steps {
                 sh 'echo "Node IP:`hostname -I`"'
